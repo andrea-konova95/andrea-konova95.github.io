@@ -1,6 +1,9 @@
 * {
   box-sizing: border-box;
 }
+img {
+  max-width: 100%;
+}
 body {
   background-color: #20202D;
   margin: 0;
@@ -8,6 +11,7 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 .container {
+  width: 90%;
   max-width: 945px;
   margin: auto;
 }
@@ -62,6 +66,7 @@ body {
   font-size: 16px;
   line-height: 28px;
   max-width: 420px;
+  margin: 0;
   margin-bottom: 38px;
 }
 .button {
@@ -269,4 +274,140 @@ body {
   text-decoration-line: underline;
   color: #A5A5A5;
   margin-top: 72px;
+}
+
+/* responsive */
+@media (max-width: 1100px) {
+  .hero-avatar {
+    width: 300px;
+    height: 300px;
+    border-width: 10px;
+    background-position: center top -90px;
+  }
+}
+@media (max-width: 836px) {
+  .hero-content {
+    flex-direction: column;
+  }
+  .hero-avatar {
+    order: 0;
+    width: 300px;
+    height: 300px;
+    border-width: 10px;
+    margin-bottom: 17px;
+    background-position: center top -90px;
+  }
+  .hero-text {
+    order: 1;
+    text-align: center;
+  }
+  .features-item {
+    flex-basis: 45%;
+  }
+  .projects-slide {
+    flex-direction: column;
+  }
+  .project-slide {
+    margin-bottom: 46px;
+  }
+  .contacts-block {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .contacts-form {
+    margin-bottom: 58px;
+  }
+}
+@media (max-width: 564px) {
+  .hero {
+    padding-top: 43px;
+    padding-bottom: 75px;
+  }
+  .hero-avatar {
+    width: 113px;
+    height: 113px;
+    border-width: 4px;
+    background-position: center top -30px;
+  }
+  .hero-header {
+    margin-bottom: 38px;
+  }
+  .social-link {
+    margin-left: 10px;
+  }
+  .hero-title {
+    font-size: 24px;
+    line-height: 28px;
+  }
+  .hero-subtitle {
+    font-size: 16px;
+    line-height: 27px;
+    margin-bottom: 4px;
+  }
+  .hero-description {
+    font-size: 14px;
+    line-height: 140%;
+  }
+  .section {
+    padding: 60px 0;
+  }
+  .section-title {
+    font-size: 19px;
+    line-height: 22px;
+    text-align: center;
+    margin-bottom: 60px;
+  }
+  .features-item {
+    flex-basis: 100%;
+    margin-bottom: 30px;
+  }
+  .features-title {
+    font-size: 18px;
+    line-height: 28px;
+    margin-bottom: 6px;
+  }
+  .features-text {
+    font-size: 14px;
+  }
+  .project-title {
+    font-size: 18px;
+    line-height: 150%;
+  }
+  .project-time, .project-cost, .project-feedback {
+    flex-basis: 100%;
+    margin-bottom: 30px;
+  }
+  .project-paragraph {
+    font-size: 14px;
+  }
+  .projects-bullet {
+    margin-top: 0;
+  }
+  .contacts-form {
+    padding: 40px 19px;
+  }
+  .form-title {
+    font-size: 15px;
+    line-height: 140%;
+  }
+  .form-button {
+    font-size: 10px;
+  }
+  .contacts-phone, .contacts-mail {
+    flex-basis: 100%;
+    margin-bottom: 35px;
+  }
+  .contacts-title {
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+  .contacts-link {
+    font-size: 14px;
+    line-height: 16px;
+    display: block;
+    margin-bottom: 13px;
+  }
+  .contacts-policy {
+    margin-top: 26px;
+  }
 }
