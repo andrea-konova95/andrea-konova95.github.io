@@ -23,6 +23,7 @@ body {
   background-position: top right 20%;
 }
 .container {
+  width: 95%;
   max-width: 1140px;
   margin: auto;
 }
@@ -233,4 +234,123 @@ body {
 .footer-link {
   text-decoration: none;
   color: #3A383D;
+  margin-left: 25px;
+}
+.menu-button {
+  display: none;
+}
+
+/* responsive */
+@media (max-width: 760px) {
+  .play {
+    display: none;
+  }
+  .footer-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .footer-copyright {
+    display: block;
+    margin-bottom: 8px;
+  }
+  .footer-link:first-child {
+    margin-left: 0;
+  }
+}
+@media (max-width: 540px) {
+  body {
+    background-position: top right 35%;
+  }
+  .menu-button {
+    display: block;
+    position: absolute;
+    right: 35px;
+    top: 49px;
+    width: 30px;
+    height: 2px;
+    background-color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  .menu-button:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30px;
+    height: 2px;
+    background-color: #fff;
+    transition: transform 0.2s;
+    margin-top: -7px;
+  }
+  .menu-button:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30px;
+    height: 2px;
+    background-color: #fff;
+    transition: transform 0.2s;
+    margin-top: 7px;
+  }
+  .menu-button-active {
+    height: 0;
+  }
+  .menu-button-active:before {
+    transform: rotate(45deg);
+    margin-top: 0;
+  }
+  .menu-button-active:after {
+    transform: rotate(-45deg);
+    margin-top: 0;
+  }
+  .header {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 250px;
+    background-color: #9D2929;
+    padding-bottom: 40px;
+  }
+  .header-active {
+    display: flex;
+  }
+  .logo {
+    margin-bottom: 25px;
+  }
+  .menu-list {
+    margin: auto;
+    order: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .menu-link {
+    margin-right: 0;
+    margin-bottom: 17px;
+  }
+  .social {
+    order: 1;
+    margin-bottom: 22px;
+  }
+  .social-link:first-child {
+    margin-left: 0;
+  }
+  .swiper-container {
+    width: 80%;
+  }
+  .main-content {
+    margin-top: 196px;
+  }
+  .main-title {
+    font-size: 56px;
+  }
+  .series {
+    width: 80%;
+  }
 }
